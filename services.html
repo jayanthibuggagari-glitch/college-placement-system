@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | CareerConnect</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #071b3a;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #f4c542;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 9px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f4c542;
+}
+
+/* HERO */
+.hero {
+    background:
+    linear-gradient(rgba(5,20,45,.8), rgba(5,20,45,.8)),
+    url("https://images.unsplash.com/photo-1521737711867-e3b97375f902");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #f4c542;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 65px 8% 35px;
+}
+
+.intro h2 {
+    color: #071b3a;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #666;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* SERVICES */
+.services {
+    padding: 30px 8% 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    border-bottom: 4px solid #f4c542;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #071b3a;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* PROCESS */
+.process {
+    background: #071b3a;
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.process h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.process-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    background: #102b50;
+    padding: 25px 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+.process-card h3 {
+    color: #f4c542;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+    background: #071b3a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #34445c;
+}
+
+footer h2 {
+    color: #f4c542;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .services,
+    .process-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">CareerConnect</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="companies.html">Companies</a>
+        <a href="students.html">Students</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="applications.html">Applications</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <h1>Our <span>Services</span></h1>
+
+    <p>
+        Smart placement solutions for students, companies
+        and college placement administrators.
+    </p>
+
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+
+    <h2>What We Provide</h2>
+
+    <p>
+        CareerConnect provides a centralized platform to manage
+        college placement activities. It helps students find jobs,
+        companies share opportunities and administrators manage
+        the recruitment process.
+    </p>
+
+</section>
+
+<!-- SERVICE CARDS -->
+<section class="services">
+
+    <div class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3>Student Management</h3>
+        <p>
+            Store and manage student details such as name, roll number,
+            branch, CGPA, email and phone number.
+        </p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Company Management</h3>
+        <p>
+            Maintain company details, locations, websites
+            and recruitment information.
+        </p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">💼</div>
+        <h3>Job Management</h3>
+        <p>
+            Display job openings, job descriptions, salary packages
+            and eligibility requirements.
+        </p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📝</div>
+        <h3>Online Applications</h3>
+        <p>
+            Help students apply for available jobs
+            through the placement management system.
+        </p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Application Tracking</h3>
+        <p>
+            Track application progress through statuses
+            like Applied, Shortlisted and Selected.
+        </p>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🔐</div>
+        <h3>Admin Management</h3>
+        <p>
+            Provide administrators with a centralized
+            way to manage placement-related information.
+        </p>
+    </div>
+
+</section>
+
+<!-- WORKING PROCESS -->
+<section class="process">
+
+    <h2>How CareerConnect Works</h2>
+
+    <div class="process-list">
+
+        <div class="process-card">
+            <h3>01. Register</h3>
+            <p>Students create their account and provide their details.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>02. Explore Jobs</h3>
+            <p>Students view available jobs and check eligibility.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>03. Apply</h3>
+            <p>Eligible students submit their job applications.</p>
+        </div>
+
+        <div class="process-card">
+            <h3>04. Track Status</h3>
+            <p>Students check their application progress.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>CareerConnect</h2>
+
+    <p>College Placement Management System</p>
+
+    <p>Connecting Students With Their Future Careers</p>
+
+    <p>© 2026 CareerConnect. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

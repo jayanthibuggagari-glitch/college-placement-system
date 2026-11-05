@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | CareerConnect</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f5f9;
+    color: #17243b;
+}
+
+header {
+    background: #071b3a;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #e8b94f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #e8b94f;
+}
+
+.main {
+    min-height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 15px;
+    background: linear-gradient(120deg, #e9eef6, #f8f9fc);
+}
+
+.login-card {
+    background: white;
+    width: 100%;
+    max-width: 440px;
+    padding: 38px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+}
+
+.login-card h1 {
+    text-align: center;
+    color: #102d53;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.role-selection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.role-selection button {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d7dfeb;
+    background: white;
+    color: #102d53;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.role-selection button.active {
+    background: #102d53;
+    color: white;
+    border-color: #102d53;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d5dce6;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #d9a52e;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #d9a52e;
+    border: none;
+    color: #071b3a;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.login-btn:hover {
+    background: #c28e16;
+}
+
+.extra-links {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.extra-links a {
+    color: #b17b0b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.message {
+    display: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer {
+    background: #071b3a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+footer span {
+    color: #e8b94f;
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    .login-card {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">CareerConnect</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="companies.html">Companies</a>
+        <a href="students.html">Students</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="applications.html">Applications</a>
+        <a href="login.html" class="active">Login</a>
+    </nav>
+</header>
+
+<section class="main">
+
+    <div class="login-card">
+
+        <h1>Welcome Back!</h1>
+        <p class="subtitle">Login to your CareerConnect account</p>
+
+        <div class="role-selection">
+            <button type="button" id="studentBtn"
+                class="active" onclick="selectRole('Student')">
+                Student
+            </button>
+
+            <button type="button" id="adminBtn"
+                onclick="selectRole('Admin')">
+                Admin
+            </button>
+        </div>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+                <label id="usernameLabel">Student Email</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+            <div class="message" id="message"></div>
+
+        </form>
+
+        <div class="extra-links">
+            Don't have an account?
+            <a href="register.html">Register Here</a>
+            <br>
+            <a href="index.html">Back to Home</a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 <span>CareerConnect</span> | College Placement Management System</p>
+</footer>
+
+<script>
+let selectedRole = "Student";
+
+function selectRole(role) {
+    selectedRole = role;
+
+    document.getElementById("studentBtn").classList.remove("active");
+    document.getElementById("adminBtn").classList.remove("active");
+
+    if (role === "Student") {
+        document.getElementById("studentBtn").classList.add("active");
+        document.getElementById("usernameLabel").textContent = "Student Email";
+        document.getElementById("username").placeholder = "Enter your email";
+    } else {
+        document.getElementById("adminBtn").classList.add("active");
+        document.getElementById("usernameLabel").textContent = "Admin Username";
+        document.getElementById("username").placeholder = "Enter admin username";
+    }
+}
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value;
+    let message = document.getElementById("message");
+
+    if (username === "" || password === "") {
+        message.style.display = "block";
+        message.style.background = "#ffe0e0";
+        message.style.color = "#b42323";
+        message.textContent = "Please enter username and password.";
+        return;
+    }
+
+    message.style.display = "block";
+    message.style.background = "#fff1cc";
+    message.style.color = "#805b00";
+    message.textContent =
+        selectedRole + " login form is ready. Backend authentication is not connected yet.";
+});
+</script>
+
+</body>
+</html>

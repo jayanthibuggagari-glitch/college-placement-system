@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs | CareerConnect</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #071b3a;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #f4c542;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 9px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f4c542;
+}
+
+/* HERO */
+.hero {
+    background:
+    linear-gradient(rgba(5,20,45,.82), rgba(5,20,45,.82)),
+    url("https://images.unsplash.com/photo-1521737711867-e3b97375f902");
+    background-size: cover;
+    background-position: center;
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #f4c542;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 50px 8% 25px;
+}
+
+.intro h2 {
+    color: #071b3a;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* SEARCH AND FILTER */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.filters input,
+.filters select {
+    padding: 13px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.filters input:focus,
+.filters select:focus {
+    border-color: #c69b21;
+}
+
+/* JOB CARDS */
+.jobs {
+    padding: 25px 8% 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.job-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    border-top: 4px solid #f4c542;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.job-card:hover {
+    transform: translateY(-7px);
+}
+
+.job-company {
+    color: #c69b21;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.job-card h3 {
+    color: #071b3a;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.job-details {
+    color: #666;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.package {
+    display: inline-block;
+    background: #fff4cf;
+    color: #765600;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.apply-btn {
+    display: block;
+    text-align: center;
+    background: #071b3a;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.apply-btn:hover {
+    background: #c69b21;
+    color: #071b3a;
+}
+
+#noResults {
+    display: none;
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    grid-column: 1 / -1;
+}
+
+/* FOOTER */
+footer {
+    background: #071b3a;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #f4c542;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .jobs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .jobs {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .filters input,
+    .filters select {
+        width: 90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">CareerConnect</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="companies.html">Companies</a>
+        <a href="students.html">Students</a>
+        <a href="jobs.html" class="active">Jobs</a>
+        <a href="applications.html">Applications</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <h1>Explore <span>Job Opportunities</span></h1>
+
+    <p>
+        Find suitable jobs, check eligibility and take
+        the next step towards your career.
+    </p>
+
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+
+    <h2>Latest Job Openings</h2>
+
+    <p>
+        Explore job opportunities from different companies
+        and find positions that match your qualifications.
+    </p>
+
+</section>
+
+<!-- SEARCH AND FILTER -->
+<div class="filters">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search job or company..."
+        onkeyup="filterJobs()">
+
+    <select id="branchFilter" onchange="filterJobs()">
+        <option value="">All Branches</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="IT">IT</option>
+        <option value="EEE">EEE</option>
+        <option value="MECH">MECH</option>
+    </select>
+
+</div>
+
+<!-- JOB LIST -->
+<section class="jobs" id="jobList">
+
+    <div class="job-card" data-branches="CSE IT">
+        <div class="job-company">TCS</div>
+        <h3>Software Developer</h3>
+        <div class="job-details">
+            <p><strong>Location:</strong> Hyderabad</p>
+            <p><strong>Eligibility:</strong> CSE, IT</p>
+            <p><strong>Minimum CGPA:</strong> 7.0</p>
+            <p><strong>Last Date:</strong> 30-12-2026</p>
+        </div>
+        <div class="package">Package: 4.5 LPA</div>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card" data-branches="CSE ECE IT">
+        <div class="job-company">Infosys</div>
+        <h3>System Engineer</h3>
+        <div class="job-details">
+            <p><strong>Location:</strong> Bengaluru</p>
+            <p><strong>Eligibility:</strong> CSE, ECE, IT</p>
+            <p><strong>Minimum CGPA:</strong> 7.5</p>
+            <p><strong>Last Date:</strong> 25-12-2026</p>
+        </div>
+        <div class="package">Package: 5 LPA</div>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card" data-branches="CSE IT ECE">
+        <div class="job-company">Wipro</div>
+        <h3>Project Engineer</h3>
+        <div class="job-details">
+            <p><strong>Location:</strong> Bengaluru</p>
+            <p><strong>Eligibility:</strong> CSE, IT, ECE</p>
+            <p><strong>Minimum CGPA:</strong> 6.5</p>
+            <p><strong>Last Date:</strong> 20-12-2026</p>
+        </div>
+        <div class="package">Package: 4 LPA</div>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card" data-branches="CSE IT ECE">
+        <div class="job-company">Accenture</div>
+        <h3>Associate Software Engineer</h3>
+        <div class="job-details">
+            <p><strong>Location:</strong> Hyderabad</p>
+            <p><strong>Eligibility:</strong> CSE, IT, ECE</p>
+            <p><strong>Minimum CGPA:</strong> 7.0</p>
+            <p><strong>Last Date:</strong> 18-12-2026</p>
+        </div>
+        <div class="package">Package: 4.5 LPA</div>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card" data-branches="CSE ECE IT">
+        <div class="job-company">Cognizant</div>
+        <h3>Programmer Analyst</h3>
+        <div class="job-details">
+            <p><strong>Location:</strong> Chennai</p>
+            <p><strong>Eligibility:</strong> CSE, ECE, IT</p>
+            <p><strong>Minimum CGPA:</strong> 7.0</p>
+            <p><strong>Last Date:</strong> 15-12-2026</p>
+        </div>
+        <div class="package">Package: 4 LPA</div>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card" data-branches="CSE IT EEE">
+        <div class="job-company">HCLTech</div>
+        <h3>Graduate Engineer Trainee</h3>
+        <div class="job-details">
+            <p><strong>Location:</strong> Noida</p>
+            <p><strong>Eligibility:</strong> CSE, IT, EEE</p>
+            <p><strong>Minimum CGPA:</strong> 6.5</p>
+            <p><strong>Last Date:</strong> 10-12-2026</p>
+        </div>
+        <div class="package">Package: 3.5 LPA</div>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+
+    <p id="noResults">No matching jobs found.</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>CareerConnect</h2>
+
+    <p>College Placement Management System</p>
+
+    <p>Connecting Students With Their Future Careers</p>
+
+    <p>© 2026 CareerConnect. All Rights Reserved.</p>
+
+</footer>
+
+<!-- SEARCH AND FILTER JAVASCRIPT -->
+<script>
+function filterJobs() {
+
+    let search = document.getElementById("searchInput")
+        .value.toLowerCase();
+
+    let branch = document.getElementById("branchFilter")
+        .value.toUpperCase();
+
+    let cards = document.querySelectorAll(".job-card");
+    let count = 0;
+
+    cards.forEach(function(card) {
+
+        let details = card.innerText.toLowerCase();
+        let branches = card.dataset.branches.split(" ");
+
+        let matchesSearch = details.includes(search);
+        let matchesBranch = branch === "" || branches.includes(branch);
+
+        if (matchesSearch && matchesBranch) {
+            card.style.display = "block";
+            count++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    document.getElementById("noResults").style.display =
+        count === 0 ? "block" : "none";
+}
+</script>
+
+</body>
+</html>

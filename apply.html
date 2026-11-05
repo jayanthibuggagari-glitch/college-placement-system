@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply for Job | CareerConnect</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #071b3a;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #f4c542;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 9px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f4c542;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(5,20,45,.85), rgba(5,20,45,.85)),
+    url("https://images.unsplash.com/photo-1521737711867-e3b97375f902");
+    background-size: cover;
+    background-position: center;
+    padding: 65px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    color: #f4c542;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    max-width: 850px;
+    background: white;
+    margin: 45px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.form-container h2 {
+    color: #071b3a;
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.form-description {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* FORM */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    color: #071b3a;
+    font-weight: bold;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #c69b21;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: #071b3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #c69b21;
+    color: #071b3a;
+}
+
+#message {
+    display: none;
+    text-align: center;
+    margin-top: 18px;
+    padding: 13px;
+    border-radius: 5px;
+    background: #e6f5e9;
+    color: #17652a;
+}
+
+/* FOOTER */
+footer {
+    background: #071b3a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer h2 {
+    color: #f4c542;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 700px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .form-container {
+        margin: 25px 15px;
+        padding: 25px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">CareerConnect</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="companies.html">Companies</a>
+        <a href="students.html">Students</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="applications.html">Applications</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Job <span>Application Form</span></h1>
+    <p>Take the next step towards your dream career.</p>
+</section>
+
+<!-- APPLICATION FORM -->
+<div class="form-container">
+
+    <h2>Apply for a Job</h2>
+
+    <p class="form-description">
+        Enter your correct details to submit your job application.
+    </p>
+
+    <form id="applicationForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label for="studentName">Student Name *</label>
+                <input type="text" id="studentName"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rollNo">Roll Number *</label>
+                <input type="text" id="rollNo"
+                       placeholder="Enter roll number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email"
+                       placeholder="Enter email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone"
+                       placeholder="Enter 10-digit phone number"
+                       pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="branch">Branch *</label>
+                <select id="branch" required>
+                    <option value="">Select Branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="IT">IT</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">MECH</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cgpa">Current CGPA *</label>
+                <input type="number" id="cgpa"
+                       placeholder="Enter CGPA"
+                       min="0" max="10" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="company">Select Company *</label>
+                <select id="company" required>
+                    <option value="">Select Company</option>
+                    <option value="TCS">TCS</option>
+                    <option value="Infosys">Infosys</option>
+                    <option value="Wipro">Wipro</option>
+                    <option value="Accenture">Accenture</option>
+                    <option value="Cognizant">Cognizant</option>
+                    <option value="HCLTech">HCLTech</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="jobRole">Select Job Role *</label>
+                <select id="jobRole" required>
+                    <option value="">Select Job Role</option>
+                    <option value="Software Developer">Software Developer</option>
+                    <option value="System Engineer">System Engineer</option>
+                    <option value="Project Engineer">Project Engineer</option>
+                    <option value="Associate Software Engineer">Associate Software Engineer</option>
+                    <option value="Programmer Analyst">Programmer Analyst</option>
+                    <option value="Graduate Engineer Trainee">Graduate Engineer Trainee</option>
+                </select>
+            </div>
+
+            <div class="form-group full">
+                <label for="resume">Resume File</label>
+                <input type="file" id="resume" accept=".pdf,.doc,.docx">
+            </div>
+
+            <div class="form-group full">
+                <label for="messageText">Additional Information</label>
+                <textarea id="messageText"
+                          placeholder="Enter any additional information..."></textarea>
+            </div>
+
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Submit Application
+        </button>
+
+        <div id="message"></div>
+
+    </form>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h2>CareerConnect</h2>
+    <p>College Placement Management System</p>
+    <p>Connecting Students With Their Future Careers</p>
+    <p>© 2026 CareerConnect. All Rights Reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.getElementById("applicationForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const message = document.getElementById("message");
+
+    message.style.display = "block";
+    message.textContent =
+        "Form validation successful! Backend connection is required to save your application.";
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Companies | CareerConnect</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #071b3a;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #f4c542;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 9px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f4c542;
+}
+
+/* HERO */
+.hero {
+    background:
+    linear-gradient(rgba(5,20,45,.82), rgba(5,20,45,.82)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+    background-size: cover;
+    background-position: center;
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #f4c542;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* PAGE INTRO */
+.intro {
+    text-align: center;
+    padding: 55px 8% 30px;
+}
+
+.intro h2 {
+    color: #071b3a;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* SEARCH */
+.search-area {
+    text-align: center;
+    padding: 15px 20px 35px;
+}
+
+.search-area input {
+    width: 90%;
+    max-width: 500px;
+    padding: 14px 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.search-area input:focus {
+    border-color: #c69b21;
+}
+
+/* COMPANY CARDS */
+.companies {
+    padding: 10px 8% 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.company-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    border-top: 4px solid #f4c542;
+    transition: .3s;
+}
+
+.company-card:hover {
+    transform: translateY(-7px);
+}
+
+.company-logo {
+    width: 75px;
+    height: 75px;
+    background: #071b3a;
+    color: #f4c542;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.company-card h3 {
+    color: #071b3a;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.company-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.company-card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 22px;
+    background: #071b3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.company-card a:hover {
+    background: #c69b21;
+    color: #071b3a;
+}
+
+#noResults {
+    display: none;
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    grid-column: 1 / -1;
+}
+
+/* FOOTER */
+footer {
+    background: #071b3a;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #f4c542;
+    margin-bottom: 10px;
+}
+
+footer p {
+    line-height: 1.8;
+    color: #ddd;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .companies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .companies {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">CareerConnect</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="companies.html" class="active">Companies</a>
+        <a href="students.html">Students</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="applications.html">Applications</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Our <span>Partner Companies</span></h1>
+    <p>Explore organizations and discover exciting career opportunities.</p>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+    <h2>Companies on CareerConnect</h2>
+    <p>
+        Find company information, explore organizations
+        and learn about potential career opportunities.
+    </p>
+</section>
+
+<!-- SEARCH -->
+<div class="search-area">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search company name or location..."
+        onkeyup="searchCompanies()">
+</div>
+
+<!-- COMPANY LIST -->
+<section class="companies" id="companyList">
+
+    <div class="company-card">
+        <div class="company-logo">T</div>
+        <h3>TCS</h3>
+        <p><strong>Location:</strong> Hyderabad</p>
+        <p>Tata Consultancy Services is an IT services and consulting company.</p>
+        <a href="https://www.tcs.com/" target="_blank">Visit Website</a>
+    </div>
+
+    <div class="company-card">
+        <div class="company-logo">I</div>
+        <h3>Infosys</h3>
+        <p><strong>Location:</strong> Bengaluru</p>
+        <p>Infosys provides digital services, consulting and technology solutions.</p>
+        <a href="https://www.infosys.com/" target="_blank">Visit Website</a>
+    </div>
+
+    <div class="company-card">
+        <div class="company-logo">W</div>
+        <h3>Wipro</h3>
+        <p><strong>Location:</strong> Bengaluru</p>
+        <p>Wipro offers technology services, consulting and business solutions.</p>
+        <a href="https://www.wipro.com/" target="_blank">Visit Website</a>
+    </div>
+
+    <div class="company-card">
+        <div class="company-logo">A</div>
+        <h3>Accenture</h3>
+        <p><strong>Location:</strong> Hyderabad</p>
+        <p>Accenture works in technology, consulting and digital transformation.</p>
+        <a href="https://www.accenture.com/" target="_blank">Visit Website</a>
+    </div>
+
+    <div class="company-card">
+        <div class="company-logo">C</div>
+        <h3>Cognizant</h3>
+        <p><strong>Location:</strong> Chennai</p>
+        <p>Cognizant provides IT services and business consulting solutions.</p>
+        <a href="https://www.cognizant.com/" target="_blank">Visit Website</a>
+    </div>
+
+    <div class="company-card">
+        <div class="company-logo">H</div>
+        <h3>HCLTech</h3>
+        <p><strong>Location:</strong> Noida</p>
+        <p>HCLTech provides engineering, IT and digital technology services.</p>
+        <a href="https://www.hcltech.com/" target="_blank">Visit Website</a>
+    </div>
+
+    <p id="noResults">No companies found.</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>CareerConnect</h2>
+    <p>College Placement Management System</p>
+    <p>Connecting Students With Their Future Careers</p>
+    <p>© 2026 CareerConnect. All Rights Reserved.</p>
+</footer>
+
+<!-- SEARCH JAVASCRIPT -->
+<script>
+function searchCompanies() {
+
+    let input = document.getElementById("searchInput")
+        .value.toLowerCase();
+
+    let cards = document.querySelectorAll(".company-card");
+    let count = 0;
+
+    cards.forEach(function(card) {
+
+        let companyDetails = card.innerText.toLowerCase();
+
+        if (companyDetails.includes(input)) {
+            card.style.display = "block";
+            count++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    document.getElementById("noResults").style.display =
+        count === 0 ? "block" : "none";
+}
+</script>
+
+</body>
+</html>

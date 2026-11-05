@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About CareerConnect</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: #071b3a;
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #f4c542;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 9px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav .active {
+    color: #f4c542;
+}
+
+/* HERO */
+.hero {
+    min-height: 390px;
+    background:
+    linear-gradient(rgba(5,20,45,.75), rgba(5,20,45,.75)),
+    url("https://images.unsplash.com/photo-1521737711867-e3b97375f902");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #f4c542;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #eee;
+}
+
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 75px 8%;
+    flex-wrap: wrap;
+    background: white;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 12px 12px 0 #f4c542;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.small-title {
+    color: #c69b21;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-content h2 {
+    font-size: 34px;
+    color: #071b3a;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.about-content p {
+    line-height: 1.9;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* STATISTICS */
+.stats {
+    background: #071b3a;
+    padding: 45px 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat h2 {
+    color: #f4c542;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    color: white;
+    font-size: 15px;
+}
+
+/* WHY CHOOSE US */
+.why {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.why h2 {
+    color: #071b3a;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    border-top: 4px solid #f4c542;
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+}
+
+.feature-card .symbol {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    color: #071b3a;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* BOTTOM BANNER */
+.banner {
+    margin: 20px 8% 70px;
+    padding: 45px 30px;
+    text-align: center;
+    background: #f4c542;
+    border-radius: 8px;
+}
+
+.banner h2 {
+    color: #071b3a;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.banner p {
+    color: #333;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+footer {
+    background: #071b3a;
+    color: white;
+    padding: 35px 8%;
+    text-align: center;
+}
+
+footer h2 {
+    color: #f4c542;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #ddd;
+    line-height: 1.7;
+}
+
+@media(max-width: 800px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+}
+
+@media(max-width: 450px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">CareerConnect</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="companies.html">Companies</a>
+        <a href="students.html">Students</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="applications.html">Applications</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Building Your <span>Future</span> With CareerConnect</h1>
+
+        <p>
+            A smart college placement management platform that connects
+            talented students with leading companies and career opportunities.
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"
+             alt="College students">
+    </div>
+
+    <div class="about-content">
+
+        <div class="small-title">ABOUT OUR PLATFORM</div>
+
+        <h2>One Platform. Many Career Opportunities.</h2>
+
+        <p>
+            CareerConnect is a College Placement Management System
+            developed to simplify the campus recruitment process.
+        </p>
+
+        <p>
+            Students can explore job openings, check eligibility,
+            and apply for company recruitment opportunities.
+        </p>
+
+        <p>
+            Placement administrators can manage student records,
+            company details, job information and application status
+            through a centralized system.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- STATISTICS -->
+<section class="stats">
+
+    <div class="stat">
+        <h2>500+</h2>
+        <p>Registered Students</p>
+    </div>
+
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Partner Companies</p>
+    </div>
+
+    <div class="stat">
+        <h2>100+</h2>
+        <p>Job Opportunities</p>
+    </div>
+
+    <div class="stat">
+        <h2>85%</h2>
+        <p>Placement Goal</p>
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+
+    <h2>Why Choose CareerConnect?</h2>
+
+    <p class="subtitle">
+        Making the college placement process simple and organized.
+    </p>
+
+    <div class="features">
+
+        <div class="feature-card">
+            <div class="symbol">🎓</div>
+            <h3>Student Management</h3>
+            <p>
+                Maintain student profiles, academic details,
+                contact information and eligibility records.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="symbol">🏢</div>
+            <h3>Company Management</h3>
+            <p>
+                Store company information and provide details
+                about recruitment opportunities.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="symbol">💼</div>
+            <h3>Job Applications</h3>
+            <p>
+                Allow students to view available jobs and
+                track their application status.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BANNER -->
+<section class="banner">
+
+    <h2>Your Career Journey Starts Here!</h2>
+
+    <p>
+        Explore opportunities, improve your skills and move
+        towards your professional goals with CareerConnect.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>CareerConnect</h2>
+
+    <p>College Placement Management System</p>
+
+    <p>Connecting Students With Their Future Careers</p>
+
+    <p>© 2026 CareerConnect. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
